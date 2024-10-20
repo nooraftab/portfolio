@@ -1,4 +1,4 @@
-# Pari's Portfolio
+# Soon-to-be Noor's Portfolio
 
 My portfolio project is a reflection of my creativity, technical skill, and unique perspective as a front end developer. I've designed every aspect of the website, from the user interface to the code, with my personal aesthetic and approach to web development in mind.
 
