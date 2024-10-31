@@ -1,3 +1,5 @@
+@import "~/src/index.css";
+
 .common-button {
   background-color: var(--orange);
   color: var(--black);

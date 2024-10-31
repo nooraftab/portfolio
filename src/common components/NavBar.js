@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import logo from "./noor.png";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const NavBar = () => {
       <div className="logo-section">
         <div className="misc-nav">
           <img src={logo} alt="logo" className="logo-img" />
-          <h1 className="logo-heading">Pari Bhandarkar</h1>
+          <h1 className="logo-heading">Noor Aftab</h1>
         </div>
         <button onClick={toggleNav} className="mobile-menu-icon">
           {text}
@@ -46,7 +46,10 @@ const NavBar = () => {
         <>
           <div className="nav-section">
             <NavLink to="/" className="nav-actual-link">
-              Work
+              Home
+            </NavLink>
+            <NavLink to="/work-research" className="nav-actual-link">
+              Work+Research
             </NavLink>
             <NavLink to="/about" className="nav-actual-link">
               About

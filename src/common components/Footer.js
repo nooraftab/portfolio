@@ -10,7 +10,8 @@ import insta from "../work/stickers/instagram.svg";
 
 const Footer = () => {
   const [leftPos, setLeftPos] = useState(-2100);
-  // const [leftPos, setLeftPos] = useState(-600);
+  const [numberOfStars, setNumberOfStars] = useState(0);
+  const starWidth = 30; // Adjust this to the actual width of your star image in pixels
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,76 +22,59 @@ const Footer = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const updateStars = () => {
+      const width = window.innerWidth; // Get the current browser width
+      const starsToShow = Math.floor(width / starWidth); // Calculate how many stars fit
+      setNumberOfStars(starsToShow); // Update state
+    };
+
+    updateStars();
+    window.addEventListener("resize", updateStars);
+
+    return () => {
+      window.removeEventListener("resize", updateStars);
+    };
+  }, []);
+
   return (
     <>
       <div className="hire-me-scroll">
         <h5 className="hire-me" style={{ left: `${leftPos}px` }}>
-          Hire me <img src={star} alt="hire me" className="hire-me-star" /> Hire
-          me <img src={star} alt="hire me" className="hire-me-star" /> Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
-          <img src={star} alt="hire me" className="hire-me-star" />
-          Hire me
+          {Array.from({ length: numberOfStars }, (_, index) => (
+            <img key={index} src={star} alt="hire me" className="hire-me-star" />
+          ))}
         </h5>
       </div>
 
       <div className="contact-section">
+        <h6 className="contact-line">I'm findable!</h6>
         <div className="contact-one">
-          <h6 className="contact-line">
-            Didn’t your mother tell you that networking was good for you?
-          </h6>
           <div className="social-links">
-            <a href="mailto: bhandarkarpari@gmail.com">
+            <a href="mailto:nooraftab42@gmail.com">
               <img src={gmail} alt="gmail" className="icon-link" />
             </a>
             <a
-              href="https://www.linkedin.com/in/paribhandarkar"
+              href="https://www.linkedin.com/in/nooraftab42"
               target="_blank"
               rel="noreferrer"
             >
               <img src={linkedin} alt="linkedin" className="icon-link" />
             </a>
             <a
-              href="https://twitter.com/parisbhandarkar?t=nDvb9UhvoooYn_BRHrm_gQ&s=08"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={twitter} alt="twitter" className="icon-link" />
-            </a>
-            <a
-              href="https://github.com/paribhandarkar"
+              href="https://github.com/nooraftab"
               target="_blank"
               rel="noreferrer"
             >
               <img src={github} alt="github" className="icon-link" />
             </a>
-            <a
-              href="https://www.instagram.com/paribhandarkar/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={insta} alt="instagram" className="icon-link" />
-            </a>
           </div>
         </div>
-        <Button text="Let's talk" link="mailto: bhandarkarpari@gmail.com" />
       </div>
 
       <div className="last-line">
         <p id="last-line">
-          This is all there is. Were you expecting more? It's okay, me too.
+          Credit to <a href="https://github.com/paribhandarkar/portfolio">Pari Bhandarkar</a>  for the super cute website template! 
         </p>
       </div>
     </>

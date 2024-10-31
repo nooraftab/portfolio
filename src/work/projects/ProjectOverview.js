@@ -94,11 +94,11 @@ const ProjectOverview = () => {
           </div>
         </div>
       </div>
-      <h4 className="loved-project-heading">
+      {/* <h4 className="loved-project-heading">
         <NavLink to="/mini-projects">
           Projects that still deserve love →
         </NavLink>
-      </h4>
+      </h4> */}
     </div>
   );
 };

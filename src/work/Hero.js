@@ -27,12 +27,12 @@ const Hero = () => {
       <img src={star4} className="orange-star-four" alt="sticker" />
       <img src={star5} className="purple-star" alt="sticker" />
       <img src={star2} className="white-star-three" alt="sticker" />
-      <h2 className="intro">Hi there, I’m Pari</h2>
+      <h2 className="intro">Hi there! I’m Noor. </h2>
       <h2 className="description">
-        A design-minded front-end software engineer focused on building
-        beautiful interfaces & experiences.
+        I'm an ex-software engineer transitioning into the field of astronomy.
       </h2>
-      <Button text="Resume" link="https://www.figma.com/proto/N2Dhveyz9PteMqRIF4LPCN/Simple-Resume%2FCV-Template-(Community)?node-id=310-34&scaling=scale-down-width&page-id=303%3A23&hide-ui=1"/>
+  
+      <Button text="CV" link="https://drive.google.com/file/d/1WKv5-cHcyV4MizT3-MtTp19R0usmArwi/view?usp=sharing"/> 
     </div>
   );
 };

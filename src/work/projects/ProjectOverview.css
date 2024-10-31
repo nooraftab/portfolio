@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Fanwood+Text:ital@0;1&display=swap");
+@import "~/src/index.css";
 
 * {
   margin: 0;
@@ -8,25 +9,16 @@
 :root {
   --heading-text: "Changa One", cursive;
   --body-text: "Fanwood Text", serif;
-  --cream: #f8eeec;
-  --orange: #e85c3b;
-  --black: #222222;
-  --pink: #ffc3de;
-  --red: #e32450;
-  --midnight-blue: #181c52;
   --border: 2px solid var(--black);
+  background-color: var(--hero-background); 
 }
 
 .project-overview-section {
-  background: rgb(248, 238, 236);
   background: linear-gradient(
     0deg,
-    rgba(248, 238, 236, 1) 93%,
-    rgba(255, 195, 222, 1) 100%
+    var(--banner) 93%,
+    var(--hero-background) 100%
   );
-  margin-top: 40px;
-  /* border: var(--border);
-  background-color: var(--cream); */
 }
 
 .proud-project-heading {
@@ -35,6 +27,7 @@
   font-size: 62.7953px;
   font-family: var(--heading-text);
   margin-top: 50px;
+  color: var(--heading);
 }
 
 @media screen and (max-width: 768px) {
@@ -93,7 +86,6 @@
 
   .staple-section,
   .portfolio-section {
-    /* display: block; */
     flex-direction: column;
     align-items: center;
     justify-content: center;

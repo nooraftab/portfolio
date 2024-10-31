@@ -9,8 +9,26 @@ font-family: 'Fanwood Text', serif; */
   padding: 0;
 }
 
+:root {
+  --cream: #f6f3eb;
+  --pink: #f6d7eb;
+  --dark-purple: #5c0c42;
+  --orange: #e19140;
+  --black: #333333;
+
+  /* Flower colors */
+  --flower1 : #ceb13b;
+  --flower2: #f391ab;
+
+  --text: var(--black);
+  --hero-background: var(--pink);
+  --heading: var(--dark-purple);
+  --hero-accent-text: var(--orange);
+  --banner: var(--cream);
+}
+
 body{
-  background-color: #ffc3de;
+  background-color: var(--hero-background) ;
 }
 
 
