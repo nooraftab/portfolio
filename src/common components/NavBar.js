@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./noor.png";
+import logo from "./portfolio.png";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 
@@ -48,7 +48,7 @@ const NavBar = () => {
             <NavLink to="/" className="nav-actual-link">
               Home
             </NavLink>
-            <NavLink to="/work-research" className="nav-actual-link">
+            {/* <NavLink to="/mini-projects" className="nav-actual-link">
               Work+Research
             </NavLink>
             <NavLink to="/about" className="nav-actual-link">
@@ -56,7 +56,7 @@ const NavBar = () => {
             </NavLink>
             <NavLink to="/contact" className="nav-actual-link">
               Contact
-            </NavLink>
+            </NavLink> */}
           </div>
         </>
       )}

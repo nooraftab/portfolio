@@ -29,7 +29,7 @@ const Hero = () => {
       <img src={star2} className="white-star-three" alt="sticker" />
       <h2 className="intro">Hi there! I’m Noor. </h2>
       <h2 className="description">
-        I'm an ex-software engineer transitioning into the field of astronomy.
+        Mainly an ex-software engineer turned astronomer. Also a hopeful Ph.D student. 
       </h2>
   
       <Button text="CV" link="https://drive.google.com/file/d/1WKv5-cHcyV4MizT3-MtTp19R0usmArwi/view?usp=sharing"/> 
